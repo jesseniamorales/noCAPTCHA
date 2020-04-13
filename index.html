@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>noCAPTCHA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <br>
+    <br>
+    <form action="index.html">
+        <input type="checkbox" name="vehicle1" value="I am not a Robot">
+        <label for="vehicle1"> I'm not a robot</label>
+        <img src="recaptcha.png">
+        <br><br>
+        <input type="submit" value="Submit">
+      </form>
+</body>
+</html>
+  
+<script type="text/javascript">
+
+    function checkform(theform){
+        var why = "";
+    
+        if(theform.CaptchaInput.value == ""){
+        why += "- Please Enter CAPTCHA Code.\n";
+        }
+        if(theform.CaptchaInput.value != ""){
+        if(ValidCaptcha(theform.CaptchaInput.value) == false){
+        why += "- The CAPTCHA Code Does Not Match.\n";
+        }
+        }
+
+</script>
